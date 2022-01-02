@@ -1,7 +1,18 @@
 import Article from "./Article";
 import { Link } from 'react-router-dom';
+import { useEffect, useState} from 'react';
  
 function Home() {
+  const [postList, setPostList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/posts')
+      .then(response => response.json())
+      .then(data => {
+        setPostList(data.posts);
+      })
+  }, [])
+
   return (
     <div>
       <header>
@@ -9,7 +20,11 @@ function Home() {
       </header>
       <main>
         <section>
-          <Article />
+
+          {postList.length > 0 ? postList.map((element) => {
+            return <Article key={element.id} post={element}/>;
+          }) : <h1>Loading...</h1>}
+
         </section>
         <aside>
           <Link to="/newpost" className="postBtn">SUBMIT A NEW POST</Link>

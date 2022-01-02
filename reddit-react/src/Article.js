@@ -1,11 +1,11 @@
 import Post from "./Post";
 import Vote from "./Vote";
 
-function Article() {
+function Article(props) {
   return (
     <article>
-      <Vote />
-      <Post />
+      <Vote postDetails={props.post} />
+      <Post postDetails={props.post} />
     </article>
   );
 }
