@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato", sans-serif;
+  background: #eeeeee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 250px;
+  background: url("../public/assets/milky-way-g327fe2e98_1920.jpg");
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #fff;
+  letter-spacing: 55px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  color: #fff;
+  font-size: 0.8em;
+  word-spacing: 5px;
+}
+
+main {
+  margin: 10px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  background: #fff;
+  margin-right: 10px;
+  flex-grow: 3;
+}
+
+aside {
+  flex-grow: 1;
+}
+
+article {
+  display: flex;
+  height: 120px;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+  margin: 2px;
+}
+
+.aboutDetails {
+  background: #e4e3e5;
+  padding: 10px;
+}
+
+h3 {
+  background: #fbfbfb;
+  padding: 10px;
+}
+
+.postBtn {
+  border: none;
+  background: #4aa3df;
+  color: #fff;
+  padding: 5px 55px;
+  text-decoration: none;
+}
+
+.vote,
+.post {
+  padding: 5px 10px;
+}
+
+.postInfo,
+.url {
+  font-size: 0.6em;
+}
+
+a {
+  text-decoration: none;
+  color: #4aa3df;
+}
+
+form {
+  width: 400px;
+  height: 200px;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.asterisk {
+  color: red;
+}
+
+[type="submit"] {
+  width: 50%;
+  border: none;
+  background: #4aa3df;
+  color: #fff;
+  padding: 5px 55px;
 }
